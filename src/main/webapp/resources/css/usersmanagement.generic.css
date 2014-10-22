@@ -12,6 +12,10 @@ body {
   fieldset { display: table-cell; }
 }
 
+.ul-no-style{
+	list-style-type: none;
+}
+
 .full-bloc-light
 {
 	background-color:#4e5d6c;

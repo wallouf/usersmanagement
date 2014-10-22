@@ -9,19 +9,19 @@
     http://www.springframework.org/schema/mvc
     http://www.springframework.org/schema/mvc/spring-mvc.xsd
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
-	<context:component-scan base-package="com.wallouf.usersmanagement" />
+    <context:component-scan base-package="com.wallouf.usersmanagement.controller" />
     <mvc:resources mapping="/resources/**" location="/resources/" />
     <tx:annotation-driven transaction-manager="transactionManager" />
     
     <mvc:annotation-driven />
-    
+
     <bean id="messageSource"
         class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basename" value="classpath:messages" />
         <property name="defaultEncoding" value="UTF-8" />
     </bean>
 
-  	<bean
+    <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
             <value>/WEB-INF/view/</value>
@@ -29,22 +29,5 @@
         <property name="suffix">
             <value>.jsp</value>
         </property>
-    </bean>
-
-    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-        <property name="jndiName" value="java:comp/env/jdbc/usersmanagement" />
-    </bean>
-
-    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="dataSource" ref="dataSource" />
-        <property name="jpaProperties">
-  			<value>
-    			hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
-  			</value>
-		</property>
-    </bean>
-
-    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory" />
     </bean>
 </beans>

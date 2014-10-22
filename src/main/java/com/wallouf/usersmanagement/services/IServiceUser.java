@@ -1,4 +1,4 @@
-package com.wallouf.usermanagement.services;
+package com.wallouf.usersmanagement.services;
 
 import java.util.List;
 

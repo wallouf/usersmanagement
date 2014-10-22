@@ -41,6 +41,13 @@
 					<div class="full-bloc-light">
 					  <h3>Welcome to Users management application, developped for the Sagemcom test!</b></h3>
 					</div>
+					<p>
+						Here you can :
+						<ul class="ul-no-style">
+							<li><a href="<c:url value="/list" />"><span class="glyphicon glyphicon-align-left"></span> Display</a> list of Users and Groups</li>
+							<li><a href="<c:url value="/upload" />"><span class="glyphicon glyphicon-upload"></span> Upload</a> a new ".csv" file.</li>
+						</ul>
+					</p>
 				</div>
 			</div>
 		</div>
