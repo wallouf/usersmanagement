@@ -5,11 +5,13 @@ import java.util.List;
 import com.wallouf.usersmanagement.entities.User;
 
 public interface IUserDAO {
-    List<User> rechercherUsers();
+    List<User> findUsers();
 
-    User rechercherUser( final String email );
+    User findUser( final String email );
 
-    void creerUser( final User pUser );
+    void createUser( final User pUser );
 
-    void supprimerUser( final User pUser );
+    void updateUser( final User pUser );
+
+    void removeUser( final User pUser );
 }

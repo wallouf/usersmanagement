@@ -20,6 +20,10 @@ public class User {
     private String     email;
     private Set<Group> groups = new HashSet<Group>( 0 );
 
+    public User() {
+        super();
+    }
+
     public User( Integer id, String name, Set<Group> groups ) {
         super();
         this.id = id;

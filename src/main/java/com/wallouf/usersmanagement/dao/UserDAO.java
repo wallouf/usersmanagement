@@ -23,7 +23,7 @@ public class UserDAO implements IUserDAO {
     @PersistenceContext
     private EntityManager       entityManager;
 
-    public List<User> rechercherUsers() {
+    public List<User> findUsers() {
         final CriteriaBuilder lCriteriaBuilder = entityManager.getCriteriaBuilder();
 
         final CriteriaQuery<User> lCriteriaQuery = lCriteriaBuilder.createQuery( User.class );
@@ -34,17 +34,20 @@ public class UserDAO implements IUserDAO {
         return lTypedQuery.getResultList();
     }
 
-    public void creerUser( User pUser ) {
+    public void updateUser( User pUser ) {
         entityManager.persist( pUser );
-
     }
 
-    public void supprimerUser( User pUser ) {
+    public void createUser( User pUser ) {
+        entityManager.persist( pUser );
+    }
+
+    public void removeUser( User pUser ) {
         final User lUser = entityManager.getReference( User.class, pUser.getId() );
         entityManager.remove( lUser );
     }
 
-    public User rechercherUser( String email ) {
+    public User findUser( String email ) {
         Query requete = entityManager.createQuery( JPQL_SELECT_PAR_EMAIL );
         requete.setParameter( PARAM_EMAIL, email );
         try {

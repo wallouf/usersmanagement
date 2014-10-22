@@ -11,5 +11,7 @@ public interface IGroupDAO {
 
     void createGroup( final Group pGroup );
 
+    void updateGroup( final Group pGroup );
+
     void removeGroup( final Group pGroup );
 }

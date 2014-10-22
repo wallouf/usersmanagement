@@ -18,6 +18,10 @@ public class Group {
     private String     name;
     private Set<Group> groups = new HashSet<Group>( 0 );
 
+    public Group() {
+        super();
+    }
+
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     @Column( name = "id", unique = true, nullable = false )

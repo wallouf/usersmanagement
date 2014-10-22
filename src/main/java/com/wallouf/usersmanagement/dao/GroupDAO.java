@@ -56,4 +56,9 @@ public class GroupDAO implements IGroupDAO {
         }
     }
 
+    public void updateGroup( Group pGroup ) {
+        entityManager.persist( pGroup );
+
+    }
+
 }
