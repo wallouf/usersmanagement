@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 
     @RequestMapping( method = RequestMethod.GET )
-    public String afficherBonjour( final ModelMap pModel ) {
+    public String display( final ModelMap pModel ) {
         return "index";
     }
 }

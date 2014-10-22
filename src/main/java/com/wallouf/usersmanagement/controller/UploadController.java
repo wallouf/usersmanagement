@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class UploadController {
 
     @RequestMapping( method = RequestMethod.GET )
-    public String afficherBonjour( final ModelMap pModel ) {
+    public String display( final ModelMap pModel ) {
+        return "upload";
+    }
+
+    @RequestMapping( method = RequestMethod.POST )
+    public String uploadData( final ModelMap pModel ) {
         return "upload";
     }
 }
