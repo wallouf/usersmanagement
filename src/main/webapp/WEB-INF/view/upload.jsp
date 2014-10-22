@@ -43,7 +43,7 @@
 				            <fieldset>
 				                <legend>Envoi de fichier</legend>
 				                <label for="fichier">Emplacement du fichier <span class="requis">*</span></label>
-				                <input type="file" id="fichier" name="fichier" />
+				                <input type="file" id="fileInput" name="fileInput" />
 				                <br />
 				                
 				                <input type="submit" value="Envoyer" class="sansLabel" />
